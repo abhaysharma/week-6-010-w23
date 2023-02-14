@@ -1,0 +1,45 @@
+/* . is Class selector 
+specificity: 0010
+*/
+.container{
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* space is Descendent combinator 
+SP: 0002 */
+nav ul{
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+/* SP: 0003 */
+nav ul li{
+  flex: 1;
+}
+/* > is Direct Child Selector */
+main>p{
+  font-size: 1.25rem;
+}
+/* + is Adjacent selector */
+h2+p{
+  background-color: black;
+  color: white;
+  padding: 1rem;
+}
+/* ~ is Sibling selector */
+.stars span:hover~span{
+  opacity: .5;
+}
+.stars span{
+  cursor: pointer;
+}
+/* [] is Attribute selector */
+a[href="#"]{
+  color: tomato;
+}
+/* ^= is for checking if the value starts with */
+a[href^="http"]{
+  border-left: 4px solid tomato;
+}
