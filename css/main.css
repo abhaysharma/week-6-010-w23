@@ -43,3 +43,39 @@ a[href="#"]{
 a[href^="http"]{
   border-left: 4px solid tomato;
 }
+
+/* LoVe HAte */
+nav a,
+nav a:link,
+nav a:visited{
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: transform .5s;
+}
+nav a:hover,
+nav a:focus{
+  text-decoration: underline;
+  transform: scale(1.4);
+}
+nav a:active{
+  transform: scale(1.4) translateX(10px);
+}
+
+/* use :: for pseudo elements */
+a[href$=".pdf"]::after{
+  content: "\2193";
+  font-size: 1.25rem;
+  color: tomato;
+}
+
+h2+p::first-line{
+  color: turquoise;
+}
+
+h3+p::first-letter{
+  background-color: turquoise;
+  color: tomato;
+  padding: .25rem;
+  margin-right: .10rem;
+}
